@@ -1,0 +1,32 @@
+PROCEDURE dot_product(v1,v2 : ARRAY_OF FLOAT[3];)
+VAR
+    i : INTEGER:=0 ;
+BEGIN
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        ps := ps+v1[i]*v2[i] ;
+    END_FOR
+    
+END dot_product 
+
+
+ALGORITHM Dot_product
+VAR
+    ps : FLOAT:=0;
+    x : ARRAY_OF FLOAT[3];
+    y : ARRAY_OF FLOAT[3];
+BEGIN
+FOR i FROM 0 TO x.length-1 STEP 1 DO
+    Read(x[i]);
+END_FOR
+FOR i FROM 0 TO y.length-1 STEP 1 DO
+    Read(y[i]);
+END_FOR
+    
+dot_product(x,y)
+IF (ps==0) THEN
+    Write("x and y  are orthogonal") ;
+ELSE
+    Write("x and y not orthogonal") ;
+END_IF
+    
+END
